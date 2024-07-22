@@ -1,0 +1,140 @@
+class Contato:
+    def __init__(self, nome, telefone, email):
+        self.nome = nome
+        self.telefone = telefone
+        self.email = email
+    
+    def __str__(self):
+        return f'Nome: {self.nome}\nTelefone: {self.telefone}\nEmail: {self.email}\n'
+
+class Agenda:
+    def __init__(self):
+        self.contatos = []
+    
+    def adicionar_contato(self, contato):
+        self.contatos.append(contato)
+        print(f'Contato {contato.nome} adicionado com sucesso!\n')
+    
+    def listar_contatos(self):
+        if not self.contatos:
+            print('Agenda vazia. Nenhum contato encontrado.\n')
+        else:
+            print('Lista de Contatos:')
+            for contato in self.contatos:
+                print(contato)
+    
+    def buscar_contato(self, nome):
+        encontrados = [contato for contato in self.contatos if contato.nome.lower() == nome.lower()]
+        if not encontrados:
+            print(f'Contato com o nome "{nome}" não encontrado.\n')
+        else:
+            print('Contato(s) encontrado(s):')
+            for contato in encontrados:
+                print(contato)
+
+def main():
+    minha_agenda = Agenda()
+
+    while True:
+        print('Escolha uma opção:')
+        print('1 - Adicionar contato')
+        print('2 - Listar contatos')
+        print('3 - Buscar contato por nome')
+        print('4 - Sair')
+
+        opcao = input('Opção: ').strip()
+
+        if opcao == '1':
+            nome = input('Digite o nome do contato: poliana ')
+            telefone = input('Digite o telefone do contato: 99827466 ')
+            email = input('Digite o email do contato: polianafrancarodrigues2@gmail.com ')
+            novo_contato = Contato(nome, telefone, email)
+            minha_agenda.adicionar_contato(novo_contato)
+        
+        elif opcao == '2':
+            minha_agenda.listar_contatos()
+
+               
+        elif opcao == '3':
+            nome_busca = input('Digite o nome do contato que deseja buscar: ana ')
+            minha_agenda.buscar_contato(nome_busca)
+        
+        elif opcao == '4':
+            print('Encerrando programa...')
+            break
+        
+        else:
+            print('Opção inválida. Por favor, escolha uma opção válida.\n')
+
+if __name__ == "__main__":
+    main()
+class Contato:
+    def __init__(self, nome, telefone, email):
+        self.nome = nome
+        self.telefone = telefone
+        self.email = email
+    
+    def __str__(self):
+        return f'Nome: {self.nome}\nTelefone: {self.telefone}\nEmail: {self.email}\n'
+
+class Agenda:
+    def __init__(self):
+        self.contatos = []
+    
+    def adicionar_contato(self, contato):
+        self.contatos.append(contato)
+        print(f'Contato {contato.nome} adicionado com sucesso!\n')
+    
+    def listar_contatos(self):
+        if not self.contatos:
+            print('Agenda vazia. Nenhum contato encontrado.\n')
+        else:
+            print('Lista de Contatos:')
+            for contato in self.contatos:
+                print(contato)
+    
+    def buscar_contato(self, nome):
+        encontrados = [contato for contato in self.contatos if contato.nome.lower() == nome.lower()]
+        if not encontrados:
+            print(f'Contato com o nome "{nome}" não encontrado.\n')
+        else:
+            print('Contato(s) encontrado(s):')
+            for contato in encontrados:
+                print(contato)
+
+def main():
+    minha_agenda = Agenda()
+
+    while True:
+        print('Escolha uma opção:')
+        print('1 - Adicionar contato')
+        print('2 - Listar contatos')
+        print('3 - Buscar contato por nome')
+        print('4 - Sair')
+
+        opcao = input('Opção: ').strip()
+
+        if opcao == '1':
+            nome = input('Digite o nome do contato: poliana ')
+            telefone = input('Digite o telefone do contato: 99827466 ')
+            email = input('Digite o email do contato: polianafrancarodrigues2@gmail.com ')
+            novo_contato = Contato(nome, telefone, email)
+            minha_agenda.adicionar_contato(novo_contato)
+        
+        elif opcao == '2':
+            minha_agenda.listar_contatos()
+
+               
+        elif opcao == '3':
+            nome_busca = input('Digite o nome do contato que deseja buscar: ana ')
+            minha_agenda.buscar_contato(nome_busca)
+        
+        elif opcao == '4':
+            print('Encerrando programa...')
+            break
+        
+        else:
+            print('Opção inválida. Por favor, escolha uma opção válida.\n')
+
+if __name__ == "__main__":
+    main()
